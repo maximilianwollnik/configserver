@@ -1,0 +1,5 @@
+/target/
+.settings
+keystore.jks
+.classpath
+.project

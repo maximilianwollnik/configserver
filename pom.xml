@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>de.maximilianwollnik</groupId>
+	<artifactId>configserver</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>configserver</name>
+	<description>Demo project for Spring Boot</description>
+
+	<scm>
+		<connection>scm:git:git@github.com:maximilianwollnik/configserver.git</connection>
+		<developerConnection>scm:git:git@github.com:maximilianwollnik/configserver.git</developerConnection>
+		<url>https://github.com/maximilianwollnik/configserver</url>
+		<tag>HEAD</tag>
+	</scm>
+
+	<distributionManagement>
+		<repository>
+			<id>nexus</id>
+			<name>Releases</name>
+			<url>http://maximilianwollnik.de:8084/content/repositories/releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus</id>
+			<name>Snapshots</name>
+			<url>http://maximilianwollnik.de:8084/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<parent>
+		<groupId>org.springframework.cloud</groupId>
+		<artifactId>spring-cloud-starter-parent</artifactId>
+		<version>Angel.SR3</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.8</java.version>
+		<start-class>de.maximilianwollnik.configserver.Application</start-class>
+		<version-plugin-changes>2.11</version-plugin-changes>
+		<version-plugin-javadoc>2.10.3</version-plugin-javadoc>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-config-server</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-eureka</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-changes-plugin</artifactId>
+				<version>${version-plugin-changes}</version>
+				<executions>
+					<execution>
+						<id>validate-changes</id>
+						<phase>pre-site</phase>
+						<goals>
+							<goal>changes-validate</goal>
+						</goals>
+						<configuration>
+							<!-- if set to true the build will fail if the changes file is invalid, 
+								if set to false warnings will be logged. -->
+							<failOnError>true</failOnError>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-changes-plugin</artifactId>
+				<version>${version-plugin-changes}</version>
+				<reportSets>
+					<reportSet>
+						<reports>
+							<report>changes-report</report>
+						</reports>
+					</reportSet>
+				</reportSets>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>${version-plugin-javadoc}</version>
+				<configuration>
+				</configuration>
+			</plugin>
+		</plugins>
+	</reporting>
+</project>

@@ -1,0 +1,25 @@
+server:
+  port: 8888
+
+management:
+  context-path: /admin
+  
+logging:
+  level:
+    com.netflix.discovery: 'OFF'
+    org.springframework.cloud: 'DEBUG'
+    
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    statusPageUrlPath: /admin/info
+    healthCheckUrlPath: /admin/health
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/maximilianwollnik/config-repo
+          username: maximilianwollnik
+          password: '{cipher}AQAj0MuDlyXVf8cVGkX/QTf+GijmJ+e2p0zZn7BL9c0kJGNjcHdVc2R9oMbsVLzCk0h8N639r6ng2MxpKMnMmwC0TrSDe/nUCThJmg9ZR9IGqCm7gT7iBMPIYlWiV69IgAkua1tW5T8D676TW6aZ6cuGbodV0u4+05lZqvcpccJoQ6O7GNtC3ackADxhOUqLGOFo0Du7ebAFpE08JnyHjLG6JYKCsXj7izthZqf7de47dANM8OC7TaWCkqeqBzl/i5bPueLwOtiJGexno4ttc4YRKk/zvz+87g2YG5KnJM7U7GC17k1VOmdU5x7vOpzDG6w7eE6WSqZXQM2RmgH+hwJ/DPGxrpTybnG2btmELpT076xM+8mob+6hySeoSzwz0tw='
