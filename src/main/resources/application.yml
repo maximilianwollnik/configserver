@@ -3,7 +3,11 @@ server:
 
 management:
   context-path: /admin
-  
+
+security:
+  user:
+    password: '{cipher}AQCB2loFREw8pyHJZT0nYouE0srhJJqdMOeTqcxBmfdGsu3W0Ut8BCbmIsntcDgZUaRDN1hIo+zM2pw7AYkCBWsHrTrmkrGB55hNU4eo4dUy1HjElejg2zMJ60i9BwcSHDlzHxSpS86TLf3tADyNPdvOufkUzqlb3zILWGC/+8cUOAV3bkfe3T96esgHpb2yzExuvL4m45ZArDs6kF8qCTjnzgp5kMPB5PD7cGBspolSzy6YpuH8icMwWpy73u36/0W9bKVGAIodpAouA8n/h0OqbL1/vMJsydYPVlr2WNN6JqRNatGkXHAlVdzwGCkoP5r+Kz6RZpcFf7sIuLRCQ3TABpV/6D24j5yN+8BCqYQejnm7FmNVtA6RHM6I57UyFUc='
+      
 logging:
   level:
     com.netflix.discovery: 'OFF'
