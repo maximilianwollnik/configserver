@@ -14,6 +14,10 @@ logging:
     org.springframework.cloud: 'DEBUG'
     
 eureka:
+  password: '{cipher}AQCp5ZjbYH7zgAJbnDHQQostob3aU+mTPYq90uBdJsYV8YTqLgk+jnnAh3EYZXu66fdLC2TbO9reWwM8GFNhWg4vcX/RdUFd86mcqOTbuhVISGPhzF5hmtu0w8LM9pZY7RoKvaLBaxI5y0LpBx2P8jj5bjdDPDQqvrDrzKJkrxj7WSmU7AE0F6ulB+sHaJu7Oc1XUpNlwNRz2LOyCez5FMfeltbxAzebQr17A6EFe2BqSD6U45sPRs6uLyBD1zg5s6l9adaL1phv77IyF9Ho7btVFAKU3EJijNOdneqz5lAgHeN8f4tnQi9bIZ9Jh7rQHNwPhrhyta3oMU2503KERGRZdpLn0jJNblLZ/0kHDjjzQZN9wCILGiaLWhiWUPzdI/g='
+  client:
+    serviceUrl:
+      defaultZone: ${SPRING_CLOUD_EUREKA_PROTOCOL}://${SPRING_CLOUD_EUREKA_USER}:${eureka.password}@${SPRING_CLOUD_EUREKA_URI}:${SPRING_CLOUD_EUREKA_PORT}/eureka/
   instance:
     leaseRenewalIntervalInSeconds: 10
     statusPageUrlPath: /admin/info
