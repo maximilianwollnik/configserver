@@ -22,4 +22,4 @@ spring:
         git:
           uri: https://github.com/maximilianwollnik/config-repo
           username: maximilianwollnik
-          password: '{cipher}AQAj0MuDlyXVf8cVGkX/QTf+GijmJ+e2p0zZn7BL9c0kJGNjcHdVc2R9oMbsVLzCk0h8N639r6ng2MxpKMnMmwC0TrSDe/nUCThJmg9ZR9IGqCm7gT7iBMPIYlWiV69IgAkua1tW5T8D676TW6aZ6cuGbodV0u4+05lZqvcpccJoQ6O7GNtC3ackADxhOUqLGOFo0Du7ebAFpE08JnyHjLG6JYKCsXj7izthZqf7de47dANM8OC7TaWCkqeqBzl/i5bPueLwOtiJGexno4ttc4YRKk/zvz+87g2YG5KnJM7U7GC17k1VOmdU5x7vOpzDG6w7eE6WSqZXQM2RmgH+hwJ/DPGxrpTybnG2btmELpT076xM+8mob+6hySeoSzwz0tw='
+          password: '{cipher}AQBMUA9LDqt3LK5iyNs9WPJkXZIRYYljV31myRWCyFKa9ZrE4PEu7Eh/e0B+mv5ogx+GR+WsKk3sRSlH7Tz7PrhBWuKdXwjalDJATFo1HpsveHsowmdY24oTrTpHsXAjEMqMLrl5HZR/AhwBNW9V1A1RBXF0GYVur7gn4A1C3cSKoUdhTRPLSzo0uhrauKSIOTnTcbkYPMNreLnMRPvRRvAgJDKU+yKSVfooEObhX+LcyxqLsyX/PGAtxUw4AT4FRVS71RfYpqgh1Tk6Mb2dR28tHZkcVfyMi6+IXUHEBnmn9G8s7GSdgq9JMSIRjupbXkv1574uku2VtdauspY/Is4WnZmW24PQHkyowll2NmgeQBwGhr1bO0HSVCf+wdYDdQM='
