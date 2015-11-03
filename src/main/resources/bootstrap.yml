@@ -4,7 +4,7 @@ spring:
 encrypt:
   failOnError: false
   keyStore:
-    location: file:keystore.jks
+    location: file:${HOME}/keystore.jks
     alias: homepage
     password: ${KEYSTORE_PASSWORD}
     secret: ${KEYSTORE_PASSWORD}
