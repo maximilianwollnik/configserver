@@ -26,6 +26,8 @@ eureka:
     leaseRenewalIntervalInSeconds: 10
     statusPageUrlPath: ${management.context-path}/info
     healthCheckUrlPath: ${management.context-path}/health
+    metadataMap:
+      instanceId: ${eureka.instance.hostname}:${spring.application.name}:${server.port}
 
 spring:
   cloud:
