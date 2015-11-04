@@ -21,11 +21,11 @@ eureka:
     serviceUrl:
       defaultZone: ${EUREKAPROTOCOL}://${EUREKAUSER}:${eureka.password}@${EUREKAURI}:${EUREKAPORT}/eureka/
   instance:
+    hostname: maximilianwollnik.de
+    nonSecurePort: ${host.instance.port:8080}
     leaseRenewalIntervalInSeconds: 10
     statusPageUrlPath: ${management.context-path}/info
     healthCheckUrlPath: ${management.context-path}/health
-    metadataMap:
-      instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}}. 
 
 spring:
   cloud:

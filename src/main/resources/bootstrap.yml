@@ -1,9 +1,6 @@
 spring:
   application:
     name: configserver
-  cloud:
-    client:
-      hostname: maximilianwollnik.de
 encrypt:
   failOnError: false
   keyStore:
