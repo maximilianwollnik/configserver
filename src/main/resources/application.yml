@@ -22,7 +22,7 @@ eureka:
       defaultZone: ${EUREKAPROTOCOL}://${EUREKAUSER}:${eureka.password}@${EUREKAURI}:${EUREKAPORT}/eureka/
   instance:
     hostname: maximilianwollnik.de
-    nonSecurePort: ${host.instance.port:8080}
+    nonSecurePort: ${server.port}
     leaseRenewalIntervalInSeconds: 10
     statusPageUrlPath: ${management.context-path}/info
     healthCheckUrlPath: ${management.context-path}/health
