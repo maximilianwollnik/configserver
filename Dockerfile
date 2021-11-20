@@ -1,12 +1,11 @@
-FROM maximilianwollnik/java8
+FROM maximilianwollnik/configserver-image
 
-RUN locale-gen de_DE.UTF-8
-ENV LANG       de_DE.UTF-8
-ENV LC_ALL     de_DE.UTF-8
-ENV LANGUAGE de_DE:de
-ENV DEBIAN_FRONTEND noninteractive
-ENV HOME /root
+WORKDIR /usr/local/configserver
+ADD . .
+RUN /bin/bash /usr/local/configserver/gradlew bootJar --no-daemon && \
+    cp /usr/local/configserver/build/libs/*.jar $HOME/
+WORKDIR $HOME
+RUN rm -rf /usr/local/configserver $HOME/.gradle
 
 CMD java -Djava.security.egd=file:/dev/./urandom -jar $HOME/*.jar
 
-ADD target/*.jar $HOME/

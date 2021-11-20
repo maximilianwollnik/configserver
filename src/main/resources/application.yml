@@ -4,19 +4,29 @@ server:
 management:
   context-path: /admin
 
-security:
-  user:
-    password: '{cipher}AQCB2loFREw8pyHJZT0nYouE0srhJJqdMOeTqcxBmfdGsu3W0Ut8BCbmIsntcDgZUaRDN1hIo+zM2pw7AYkCBWsHrTrmkrGB55hNU4eo4dUy1HjElejg2zMJ60i9BwcSHDlzHxSpS86TLf3tADyNPdvOufkUzqlb3zILWGC/+8cUOAV3bkfe3T96esgHpb2yzExuvL4m45ZArDs6kF8qCTjnzgp5kMPB5PD7cGBspolSzy6YpuH8icMwWpy73u36/0W9bKVGAIodpAouA8n/h0OqbL1/vMJsydYPVlr2WNN6JqRNatGkXHAlVdzwGCkoP5r+Kz6RZpcFf7sIuLRCQ3TABpV/6D24j5yN+8BCqYQejnm7FmNVtA6RHM6I57UyFUc='
-      
 logging:
   level:
     com.netflix.discovery: 'OFF'
 
 spring:
+  application:
+    name: configserver
+  security:
+    user:
+      password: '{cipher}AQCB2loFREw8pyHJZT0nYouE0srhJJqdMOeTqcxBmfdGsu3W0Ut8BCbmIsntcDgZUaRDN1hIo+zM2pw7AYkCBWsHrTrmkrGB55hNU4eo4dUy1HjElejg2zMJ60i9BwcSHDlzHxSpS86TLf3tADyNPdvOufkUzqlb3zILWGC/+8cUOAV3bkfe3T96esgHpb2yzExuvL4m45ZArDs6kF8qCTjnzgp5kMPB5PD7cGBspolSzy6YpuH8icMwWpy73u36/0W9bKVGAIodpAouA8n/h0OqbL1/vMJsydYPVlr2WNN6JqRNatGkXHAlVdzwGCkoP5r+Kz6RZpcFf7sIuLRCQ3TABpV/6D24j5yN+8BCqYQejnm7FmNVtA6RHM6I57UyFUc='
   cloud:
     config:
+      enabled: true
       server:
         git:
           uri: https://github.com/maximilianwollnik/config-repo
           username: maximilianwollnik
           password: '{cipher}AQBMUA9LDqt3LK5iyNs9WPJkXZIRYYljV31myRWCyFKa9ZrE4PEu7Eh/e0B+mv5ogx+GR+WsKk3sRSlH7Tz7PrhBWuKdXwjalDJATFo1HpsveHsowmdY24oTrTpHsXAjEMqMLrl5HZR/AhwBNW9V1A1RBXF0GYVur7gn4A1C3cSKoUdhTRPLSzo0uhrauKSIOTnTcbkYPMNreLnMRPvRRvAgJDKU+yKSVfooEObhX+LcyxqLsyX/PGAtxUw4AT4FRVS71RfYpqgh1Tk6Mb2dR28tHZkcVfyMi6+IXUHEBnmn9G8s7GSdgq9JMSIRjupbXkv1574uku2VtdauspY/Is4WnZmW24PQHkyowll2NmgeQBwGhr1bO0HSVCf+wdYDdQM='
+
+encrypt:
+  failOnError: false
+  keyStore:
+    location: file:${HOME}/keystore.jks
+    alias: homepage
+    password: ${KEYSTORE_PASSWORD}
+    secret: ${KEYSTORE_PASSWORD}

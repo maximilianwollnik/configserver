@@ -4,9 +4,8 @@
 package de.maximilianwollnik.configserver;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.config.server.EnableConfigServer;
-import org.springframework.context.annotation.Configuration;
 
 /**
  * Configserver for my homepage
@@ -14,9 +13,8 @@ import org.springframework.context.annotation.Configuration;
  * @version 1.0
  * @since 0.1.0
  */
-@Configuration
-@EnableAutoConfiguration
 @EnableConfigServer
+@SpringBootApplication
 public class Application {
 
   /**

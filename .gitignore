@@ -3,3 +3,5 @@
 keystore.jks
 .classpath
 .project
+build/
+.gradle/

@@ -1,4 +1,4 @@
 # configserver
 spring cloud config server
 
-Copyright 2015 Maximilian Wollnik
+Copyright 2021 Maximilian Wollnik
