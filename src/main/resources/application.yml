@@ -13,7 +13,7 @@ spring:
     name: configserver
   security:
     user:
-      password: '{cipher}AQCB2loFREw8pyHJZT0nYouE0srhJJqdMOeTqcxBmfdGsu3W0Ut8BCbmIsntcDgZUaRDN1hIo+zM2pw7AYkCBWsHrTrmkrGB55hNU4eo4dUy1HjElejg2zMJ60i9BwcSHDlzHxSpS86TLf3tADyNPdvOufkUzqlb3zILWGC/+8cUOAV3bkfe3T96esgHpb2yzExuvL4m45ZArDs6kF8qCTjnzgp5kMPB5PD7cGBspolSzy6YpuH8icMwWpy73u36/0W9bKVGAIodpAouA8n/h0OqbL1/vMJsydYPVlr2WNN6JqRNatGkXHAlVdzwGCkoP5r+Kz6RZpcFf7sIuLRCQ3TABpV/6D24j5yN+8BCqYQejnm7FmNVtA6RHM6I57UyFUc='
+      password: '{cipher}AQB8qfjYm4C9MqbK9KjaMlwbbyfx697kyTtWuahlbP2rl/b2b/5z4pErdtQP3Hb2KD2trn+AWMf5XMuVKOCBU/vtys2ROgg3BwAEFEa697aZUAkSO/IsFqRBevFEWaQC7XgNOiENQ0X8SITDE7Mjo/QKHSdV8kjvnuHhIhdm+K5nXFmJ/RexChrb3SfDJjAUkaCMFJCGA3zJH2uATXHCLxCYDORqE/TRG1FijjFiEGZR+YJpDc5yi9u4Teht5xBvxZ6x9T2Hm5Kmtz1Ko2vk+epz1F5vS5mCBohUrfwmLMMGl53FF8jakdFlxiDPQfbx6xZX9lp95vnbtQsP+ASyzLUNzkFRptMAMNHfpJODAB6WwLeRoxgD+Ia5eQU6uwmaLCQ='
   cloud:
     config:
       enabled: true
@@ -21,7 +21,7 @@ spring:
         git:
           uri: https://github.com/maximilianwollnik/config-repo
           username: maximilianwollnik
-          password: '{cipher}AQBMUA9LDqt3LK5iyNs9WPJkXZIRYYljV31myRWCyFKa9ZrE4PEu7Eh/e0B+mv5ogx+GR+WsKk3sRSlH7Tz7PrhBWuKdXwjalDJATFo1HpsveHsowmdY24oTrTpHsXAjEMqMLrl5HZR/AhwBNW9V1A1RBXF0GYVur7gn4A1C3cSKoUdhTRPLSzo0uhrauKSIOTnTcbkYPMNreLnMRPvRRvAgJDKU+yKSVfooEObhX+LcyxqLsyX/PGAtxUw4AT4FRVS71RfYpqgh1Tk6Mb2dR28tHZkcVfyMi6+IXUHEBnmn9G8s7GSdgq9JMSIRjupbXkv1574uku2VtdauspY/Is4WnZmW24PQHkyowll2NmgeQBwGhr1bO0HSVCf+wdYDdQM='
+          password: '{cipher}AQA+rZXNEXsxPNpn3DKy3jfnoAhAtnPwe1pc0VHr0TJT9Wl1cG4fBgh6XT+69TGHTH+vFisuUum/dmoe/9oF9YhWS8KlcmJSQLd0GDz0R6BylZCAvjvUAInEPZgDahmdAqp1MLw2i6o6Q/KtmNEk8TJspWzXFt6pXAXil9UuGH/voMNZeWlmGMJHuDL6lRYl1d5G7hz+HBfkO+mXLxkaB4GKeRhiU82D5flmVY7XRp/nZ5bDifTFnV7suzViHnvM5YgFwM+OS2RNN/QlavxYL2lE6XRcQCm7pYWrBcuvjLuAbrc+uqW3yz+Ycc4mRFrdpVG/g/S1Mb0Xl/R+kplPS5EWv4I0/l01StA7lGIGuw0Jcd6i4wP+6ibBYRklPrrvHys='
 
 encrypt:
   failOnError: false
